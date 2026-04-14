@@ -28,43 +28,4 @@ CSC483/
 └── pom.xml
 ```
 
----
-
-## Compilation & Execution
-
-### Without Maven
-
-```bash
-# Compile
-find src -name "*.java" | xargs javac -d out/
-
-# Run Question 1 — Search Benchmark
-java -cp out com.csc483.assignment1.search.TechMartBenchmark
-
-# Run Question 2 — Sorting Benchmark
-java -cp out com.csc483.assignment2.sorting.SortingBenchmark
-```
-
-### With Maven
-
-```bash
-mvn compile          # Compile
-mvn test             # Run tests
-mvn package          # Build JAR
-```
-
----
-
-## Algorithm Complexity Reference
-
-| Algorithm | Best | Average | Worst | Space | Stable |
-|-----------|------|---------|-------|-------|--------|
-| Sequential Search | O(1) | O(n) | O(n) | O(1) | ✓ |
-| Binary Search | O(1) | O(log n) | O(log n) | O(1) | ✓ |
-| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | ✓ |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | ✓ |
-| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | ✗ |
-| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | ✗ |
-
-> Insertion Sort is skipped for n=100,000 in the benchmark (too slow).  
-> Java 11+ required.
+--
